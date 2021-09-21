@@ -1,0 +1,10 @@
+D:\champion\ProjectItem\BatchZIP\BatchZIP\bin\Debug\BatchZIP.exe
+D:\champion\ProjectItem\BatchZIP\BatchZIP\bin\Debug\BatchZIP.pdb
+D:\champion\ProjectItem\BatchZIP\BatchZIP\obj\Debug\BatchZIP.csprojAssemblyReference.cache
+D:\champion\ProjectItem\BatchZIP\BatchZIP\obj\Debug\BatchZIP.Form1.resources
+D:\champion\ProjectItem\BatchZIP\BatchZIP\obj\Debug\BatchZIP.Properties.Resources.resources
+D:\champion\ProjectItem\BatchZIP\BatchZIP\obj\Debug\BatchZIP.csproj.GenerateResource.cache
+D:\champion\ProjectItem\BatchZIP\BatchZIP\obj\Debug\BatchZIP.csproj.CoreCompileInputs.cache
+D:\champion\ProjectItem\BatchZIP\BatchZIP\obj\Debug\BatchZIP.csproj.CopyComplete
+D:\champion\ProjectItem\BatchZIP\BatchZIP\obj\Debug\BatchZIP.exe
+D:\champion\ProjectItem\BatchZIP\BatchZIP\obj\Debug\BatchZIP.pdb
