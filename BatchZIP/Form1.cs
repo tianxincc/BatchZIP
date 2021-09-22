@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace BatchZIP
@@ -42,7 +43,14 @@ namespace BatchZIP
                 MessageBox.Show("请输入合法的路径。");
                 return;
             }
-            
+            Thread thread = new Thread(new ThreadStart(ThreadZip));
+            thread.Start();
+
+            MessageBox.Show("压缩成功");
+        }
+
+        private void ThreadZip()
+        {
             var FileList = FileHelper.GetDirectories(EnterPath.Text);
             //创建一个文件夹用作输入目录
             var zipout = $@"{OutPath.Text}\{CommonStatus.OutPath}";
@@ -51,10 +59,10 @@ namespace BatchZIP
             {
                 var guid = Guid.NewGuid();
                 ZipHelper.CreateZip(item, $@"{zipout}\{guid}.zip");
-                var md5=FileHelper.GetMD5HashFromFile($@"{zipout}\{guid}.zip");
+                var md5 = FileHelper.GetMD5HashFromFile($@"{zipout}\{guid}.zip");
                 File.Move($@"{zipout}\{guid}.zip", $@"{zipout}\{md5}.zip");
                 var source = new DirectoryInfo($@"{zipout}\");
-                if (ckCustom.Checked) 
+                if (ckCustom.Checked)
                 {
                     var fileList = source.GetFiles();
                     var DateStr = FileHelper.FileToString($@"{ Directory.GetCurrentDirectory()}\ReplaceDateTime.txt");
@@ -67,9 +75,10 @@ namespace BatchZIP
                 }
             }
 
-            MessageBox.Show("压缩成功");
         }
 
-       
+
+
+
     }
 }
